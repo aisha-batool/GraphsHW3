@@ -1,6 +1,3 @@
-import import_ipynb
-from Copy of HW3_Solution_Spring_2023 import get_connections,get_countries_traveled,get_secondary_connections,count_common_connections,find_path_to_friend
-
 def test(got, expected):
     if (got==expected):
         prefix = ' OK '
@@ -401,43 +398,43 @@ def test_find_path_to_friend():
     test(find_path_to_friend(net, "Kashif", "Arif"), None) # None
     test(find_path_to_friend(net, "ABC", "DEF"), None)    # None
 
-def create_data_structure(string_input):
-    network = {}
+# def create_data_structure(string_input):
+#     network = {}
     
-    lines = string_input.split('.')
-    lines.pop()
-    #print(lines)
+#     lines = string_input.split('.')
+#     lines.pop()
+#     #print(lines)
     
-    for i in lines:
+#     for i in lines:
         
-        if ' is connected to ' in i:
-            users = []
-            a = i.split(' is connected to ')
-            x= a[-1].split(', ')
-            del a[-1]
-            a.append(x)
-            #print(x)
-            #print(a)
-            for j in x:
-                users.append(j)
-            #print(users)
+#         if ' is connected to ' in i:
+#             users = []
+#             a = i.split(' is connected to ')
+#             x= a[-1].split(', ')
+#             del a[-1]
+#             a.append(x)
+#             #print(x)
+#             #print(a)
+#             for j in x:
+#                 users.append(j)
+#             #print(users)
             
-        else:
-            country = []
-            b = i.split(' traveled to ')
-            y = b[-1].split(', ')
-            del b[-1]
-            b.append(y)
-            #print(b)
-            for j in y:
-                country.append(j)
-            #print(country)
-            t=(users,country)
-            #print(t)
-            network[a[0]]=t
-        #print(users,country)
+#         else:
+#             country = []
+#             b = i.split(' traveled to ')
+#             y = b[-1].split(', ')
+#             del b[-1]
+#             b.append(y)
+#             #print(b)
+#             for j in y:
+#                 country.append(j)
+#             #print(country)
+#             t=(users,country)
+#             #print(t)
+#             network[a[0]]=t
+#         #print(users,country)
 
-    return network
+#     return network
 example_input="Usama is connected to Saeed, Aaliya, Mohsin.\
 Usama traveled to Italy, Japan, Korea.\
 Saeed is connected to Sumaira, Zehra, Samar, Marium.\

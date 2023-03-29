@@ -1,5 +1,5 @@
 import import_ipynb
-from Copy of HW3_Solution_Spring_2023.ipynb import get_connections,get_countries_traveled,get_secondary_connections,count_common_connections,find_path_to_friend, create_data_structure
+from HW3_Solution_1 import get_connections,get_countries_traveled,get_secondary_connections,count_common_connections,find_path_to_friend, create_data_structure
 
 def test(got, expected):
     if (got==expected):
